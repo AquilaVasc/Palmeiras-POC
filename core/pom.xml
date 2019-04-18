@@ -106,5 +106,10 @@
             <groupId>uk.org.lidalia</groupId>
             <artifactId>slf4j-test</artifactId>
         </dependency>
+        <dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.0</version>
+		</dependency>
     </dependencies>
 </project>

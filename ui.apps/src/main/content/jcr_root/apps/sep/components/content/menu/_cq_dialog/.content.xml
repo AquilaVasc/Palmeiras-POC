@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Menu"
+    width="777px"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+			<include-clientlibs 
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+				categories="att.dialog-styles"/>
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                	<tabs
+		                jcr:primaryType="nt:unstructured"
+		                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+		                maximized="{Boolean}true">
+		                	<items jcr:primaryType="nt:unstructured">
+		                			<logoATTTab
+				                        jcr:primaryType="nt:unstructured"
+				                        jcr:title="menu.tab.logo"
+				                        sling:resourceType="granite/ui/components/coral/foundation/container"
+				                        margin="{Boolean}true">
+				                        		<items jcr:primaryType="nt:unstructured">
+													<well 
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="granite/ui/components/coral/foundation/well">
+														<items jcr:primaryType="nt:unstructured">
+															<pages 
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="granite/ui/components/coral/foundation/container">
+																<items jcr:primaryType="nt:unstructured">
+																	<image 
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+																		fieldLabel="att.image" 
+																		name="./logoATTImage" 
+																		rootPath="/content/dam/ATT" />
+																	<link 
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+																		fieldLabel="att.link" 
+																		name="./logoATTLink" 
+																		rootPath="/content/ATT" />
+																	<target 
+																		cq:showOnCreate="{Boolean}true"
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/select"
+																		fieldLabel="att.target" 
+																		name="./logoATTTarget">
+																		<items jcr:primaryType="nt:unstructured">
+																			<blank 
+																				jcr:primaryType="nt:unstructured"
+																				text="target.blank" 
+																				value="_blank" />
+																			<self 
+																				jcr:primaryType="nt:unstructured" 
+																				text="target.self"
+																				value="_self" />
+																		</items>
+																	</target>
+																</items>
+															</pages>
+														</items>
+													</well>
+											</items>
+				                    </logoATTTab>
+				                    <searchIconTab
+				                        jcr:primaryType="nt:unstructured"
+				                        jcr:title="menu.tab.icon.search"
+				                        sling:resourceType="granite/ui/components/coral/foundation/container"
+				                        margin="{Boolean}true">
+				                        		<items jcr:primaryType="nt:unstructured">
+													<well 
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="granite/ui/components/coral/foundation/well">
+														<items jcr:primaryType="nt:unstructured">
+															<pages 
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="granite/ui/components/coral/foundation/container">
+																<items jcr:primaryType="nt:unstructured">
+																	<icons 
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="acs-commons/components/authoring/graphiciconselect"
+																		fieldLabel="icons" 
+																		name="./searchIcon" 
+																		required="{Boolean}false">
+																		<datasource 
+																			jcr:primaryType="nt:unstructured"
+																			sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+																			path="/apps/ATT/lists/icons" />
+																	</icons>
+																</items>
+															</pages>
+														</items>
+													</well>
+												</items>
+				                   </searchIconTab>
+				                   <shopcartIconTab
+				                        jcr:primaryType="nt:unstructured"
+				                        jcr:title="menu.tab.icon.shopcart"
+				                        sling:resourceType="granite/ui/components/coral/foundation/container"
+				                        margin="{Boolean}true">
+				                        		<items jcr:primaryType="nt:unstructured">
+													<well 
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="granite/ui/components/coral/foundation/well">
+														<items jcr:primaryType="nt:unstructured">
+															<pages 
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="granite/ui/components/coral/foundation/container">
+																<items jcr:primaryType="nt:unstructured">
+																	<icons 
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="acs-commons/components/authoring/graphiciconselect"
+																		fieldLabel="icons" 
+																		name="./shopcartIcon"
+																		required="{Boolean}false">
+																		<datasource 
+																			jcr:primaryType="nt:unstructured"
+																			sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+																			path="/apps/ATT/lists/icons" />
+																	</icons>
+																	<link 
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+																		fieldLabel="att.link" 
+																		name="./shopcartIconLink"
+																		rootPath="/content/ATT" />
+																	<target 
+																		cq:showOnCreate="{Boolean}true"
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/select"
+																		fieldLabel="att.target" 
+																		name="./shopcartIconTarget">
+																		<items jcr:primaryType="nt:unstructured">
+																			<blank 
+																				jcr:primaryType="nt:unstructured"
+																				text="target.blank" 
+																				value="_blank" />
+																			<self 
+																				jcr:primaryType="nt:unstructured" 
+																				text="target.self"
+																				value="_self" />
+																		</items>
+																	</target>
+																</items>
+															</pages>
+														</items>
+													</well>
+												</items>
+			                        </shopcartIconTab>
+			                        <miATTTab
+				                        jcr:primaryType="nt:unstructured"
+				                        jcr:title="menu.tab.icon.miatt"
+				                        sling:resourceType="granite/ui/components/coral/foundation/container"
+				                        margin="{Boolean}true">
+		                        		<items jcr:primaryType="nt:unstructured">
+											<well 
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/coral/foundation/well">
+												<items jcr:primaryType="nt:unstructured">
+													<pages 
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="granite/ui/components/coral/foundation/container">
+														<items jcr:primaryType="nt:unstructured">
+															<text 
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																fieldLabel="text" 
+																name="./miATTText" />
+															<image 
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+																fieldLabel="att.image" 
+																name="./miATTImage" 
+																rootPath="/content/dam/ATT" />
+															<link 
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+																fieldLabel="att.link" 
+																name="./miATTLink" 
+																rootPath="/content/ATT" />
+															<target 
+																cq:showOnCreate="{Boolean}true"
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="granite/ui/components/coral/foundation/form/select"
+																fieldLabel="att.target" 
+																name="./miATTTarget">
+																<items jcr:primaryType="nt:unstructured">
+																	<blank 
+																		jcr:primaryType="nt:unstructured"
+																		text="target.blank" 
+																		value="_blank" />
+																	<self 
+																		jcr:primaryType="nt:unstructured" 
+																		text="target.self"
+																		value="_self" />
+																</items>
+															</target>
+														</items>
+													</pages>
+												</items>
+											</well>
+										</items>
+				                    </miATTTab>
+				                    <businessLinkTab
+				                        jcr:primaryType="nt:unstructured"
+				                        jcr:title="menu.tab.business"
+				                        sling:resourceType="granite/ui/components/coral/foundation/container"
+				                        margin="{Boolean}true">
+				                        <items jcr:primaryType="nt:unstructured">
+												<well 
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/well">
+													<items jcr:primaryType="nt:unstructured">
+														<pages 
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/container">
+															<items jcr:primaryType="nt:unstructured">
+																<text 
+																	jcr:primaryType="nt:unstructured"
+																	sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																	fieldLabel="text" 
+																	name="./businessLinkText" />
+																<icons 
+																	jcr:primaryType="nt:unstructured"
+																	sling:resourceType="acs-commons/components/authoring/graphiciconselect"
+																	fieldLabel="icons" 
+																	name="./businessLinkIcon"
+																	required="{Boolean}false">
+																	<datasource 
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+																		path="/apps/ATT/lists/icons" />
+																</icons>
+																<link 
+																	jcr:primaryType="nt:unstructured"
+																	sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+																	fieldLabel="att.link" 
+																	name="./businessLink" 
+																	rootPath="/content/ATT" />
+																<target 
+																	cq:showOnCreate="{Boolean}true"
+																	jcr:primaryType="nt:unstructured"
+																	sling:resourceType="granite/ui/components/coral/foundation/form/select"
+																	fieldLabel="att.target" 
+																	name="./businessLinkTarget">
+																	<items jcr:primaryType="nt:unstructured">
+																		<blank 
+																			jcr:primaryType="nt:unstructured"
+																			text="target.blank" 
+																			value="_blank" />
+																		<self 
+																			jcr:primaryType="nt:unstructured" 
+																			text="target.self"
+																			value="_self" />
+																	</items>
+																</target>
+															</items>
+														</pages>
+													</items>
+												</well>
+											</items>
+				                    </businessLinkTab>
+				                    <opcionMenuTab
+				                        jcr:primaryType="nt:unstructured"
+				                        jcr:title="menu.tab.options"
+				                        sling:resourceType="granite/ui/components/coral/foundation/container"
+				                        margin="{Boolean}true">
+				                        	<items jcr:primaryType="nt:unstructured">
+				                        			<listItemsPrimaryContainer
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+															composite="{Boolean}true" 
+															eaem-show-on-collapse="EAEM.showProductName"
+															fieldLabel="menu.options.first">
+															<field 
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="granite/ui/components/coral/foundation/container"
+																name="./listItemsPrimary">
+																<items jcr:primaryType="nt:unstructured">
+																	<column
+																		granite:class="foundation-layout-util-maximized-alt coral-Form-fieldwrapper"
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/container">
+																		<items jcr:primaryType="nt:unstructured">
+																			<title 
+																				jcr:primaryType="nt:unstructured"
+																				sling:resourceType="granite/ui/components/foundation/include"
+																				path="/apps/osf/components/content/reusablefields/cq:dialog/content/items/title" />
+																			<link
+																				jcr:primaryType="nt:unstructured"
+																				sling:resourceType="granite/ui/components/foundation/include"
+																				path="/apps/ATT/components/content/reusablefields/cq:dialog/content/items/link" />
+																			<target 
+																				jcr:primaryType="nt:unstructured"
+																				sling:resourceType="granite/ui/components/foundation/include"
+																				path="/apps/osf/components/content/reusablefields/cq:dialog/content/items/target" />
+																			<separator 
+																				jcr:primaryType="nt:unstructured"
+																				sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+																				name="./separator" 
+																				text="separator"
+																				uncheckedValue="{Boolean}false" 
+																				value="{Boolean}true" />
+																			<listItemsCategories
+																				cq:showOnCreate="{Boolean}true" 
+																				jcr:primaryType="nt:unstructured"
+																				jcr:title="list.of.available.classes"
+																				sling:resourceType="granite/ui/components/coral/foundation/container"
+																				margin="{Boolean}true">
+																				<items jcr:primaryType="nt:unstructured">
+																					<column 
+																						jcr:primaryType="nt:unstructured"
+																						sling:resourceType="granite/ui/components/coral/foundation/container">
+																						<items jcr:primaryType="nt:unstructured">
+																							<listItemsCategoriesContainer
+																								jcr:primaryType="nt:unstructured"
+																								sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+																								composite="{Boolean}true"
+																								eaem-show-on-collapse="EAEM.showProductName"
+																								fieldLabel="menu.options.categories">
+																								<field 
+																									jcr:primaryType="nt:unstructured"
+																									sling:resourceType="granite/ui/components/coral/foundation/container"
+																									name="./listItemsCategories">
+																									<items jcr:primaryType="nt:unstructured">
+																										<column
+																											granite:class="foundation-layout-util-maximized-alt coral-Form-fieldwrapper"
+																											jcr:primaryType="nt:unstructured"
+																											sling:resourceType="granite/ui/components/coral/foundation/container">
+																											<items jcr:primaryType="nt:unstructured">
+																												<category 
+																													cq:showOnCreate="{Boolean}true"
+																													jcr:primaryType="nt:unstructured"
+																													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																													fieldDescription="category" 
+																													fieldLabel="category"
+																													name="./category" 
+																													required="{Boolean}true" />
+																												<separator 
+																													jcr:primaryType="nt:unstructured"
+																													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+																													name="./separator" 
+																													text="separator"
+																													uncheckedValue="{Boolean}false" 
+																													value="{Boolean}true" />
+																												<listItemsSecondary
+																													cq:showOnCreate="{Boolean}true"
+																													jcr:primaryType="nt:unstructured"
+																													sling:resourceType="granite/ui/components/coral/foundation/container"
+																													margin="{Boolean}true">
+																													<items jcr:primaryType="nt:unstructured">
+																														<column 
+																															jcr:primaryType="nt:unstructured"
+																															sling:resourceType="granite/ui/components/coral/foundation/container">
+																															<items jcr:primaryType="nt:unstructured">
+																																<listItemsSecondaryContainer
+																																	jcr:primaryType="nt:unstructured"
+																																	sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+																																	composite="{Boolean}true"
+																																	eaem-show-on-collapse="EAEM.showProductName"
+																																	fieldLabel="menu.options.second">
+																																	<field 
+																																		jcr:primaryType="nt:unstructured"
+																																		sling:resourceType="granite/ui/components/coral/foundation/container"
+																																		name="./listItemsSecondary">
+																																		<items jcr:primaryType="nt:unstructured">
+																																			<column
+																																				granite:class="foundation-layout-util-maximized-alt coral-Form-fieldwrapper"
+																																				jcr:primaryType="nt:unstructured"
+																																				sling:resourceType="granite/ui/components/coral/foundation/container">
+																																				<items jcr:primaryType="nt:unstructured">
+																																					<title 
+																																						jcr:primaryType="nt:unstructured"
+																																						sling:resourceType="granite/ui/components/foundation/include"
+																																						path="/apps/osf/components/content/reusablefields/cq:dialog/content/items/title" />
+																																					<link
+																																						jcr:primaryType="nt:unstructured"
+																																						sling:resourceType="granite/ui/components/foundation/include"
+																																						path="/apps/ATT/components/content/reusablefields/cq:dialog/content/items/link" />
+																																					<target 
+																																						jcr:primaryType="nt:unstructured"
+																																						sling:resourceType="granite/ui/components/foundation/include"
+																																						path="/apps/osf/components/content/reusablefields/cq:dialog/content/items/target" />
+																																					<separator
+																																						jcr:primaryType="nt:unstructured"
+																																						sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+																																						name="./separator" 
+																																						text="separator"
+																																						uncheckedValue="{Boolean}false"
+																																						value="{Boolean}true" />
+																																					<listItemsTertiary
+																																						cq:showOnCreate="{Boolean}true"
+																																						jcr:primaryType="nt:unstructured"
+																																						sling:resourceType="granite/ui/components/coral/foundation/container"
+																																						margin="{Boolean}true">
+																																						<items jcr:primaryType="nt:unstructured">
+																																							<column
+																																								jcr:primaryType="nt:unstructured"
+																																								sling:resourceType="granite/ui/components/coral/foundation/container">
+																																								<items jcr:primaryType="nt:unstructured">
+																																									<listItemsTertiaryContainer
+																																										jcr:primaryType="nt:unstructured"
+																																										sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+																																										composite="{Boolean}true"
+																																										eaem-show-on-collapse="EAEM.showProductName"
+																																										fieldLabel="menu.options.third">
+																																										<field
+																																											jcr:primaryType="nt:unstructured"
+																																											sling:resourceType="granite/ui/components/coral/foundation/container"
+																																											name="./listItemsTertiary">
+																																											<items jcr:primaryType="nt:unstructured">
+																																												<column
+																																													granite:class="foundation-layout-util-maximized-alt coral-Form-fieldwrapper"
+																																													jcr:primaryType="nt:unstructured"
+																																													sling:resourceType="granite/ui/components/coral/foundation/container">
+																																													<items
+																																														jcr:primaryType="nt:unstructured">
+																																														<title
+																																															jcr:primaryType="nt:unstructured"
+																																															sling:resourceType="granite/ui/components/foundation/include"
+																																															path="/apps/osf/components/content/reusablefields/cq:dialog/content/items/title" />
+																																														<link
+																																															jcr:primaryType="nt:unstructured"
+																																															sling:resourceType="granite/ui/components/foundation/include"
+																																															path="/apps/ATT/components/content/reusablefields/cq:dialog/content/items/link" />
+																																														<target
+																																															jcr:primaryType="nt:unstructured"
+																																															sling:resourceType="granite/ui/components/foundation/include"
+																																															path="/apps/osf/components/content/reusablefields/cq:dialog/content/items/target" />
+																																														<separator
+																																															jcr:primaryType="nt:unstructured"
+																																															sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+																																															name="./separator" 
+																																															text="separator"
+																																															uncheckedValue="{Boolean}false"
+																																															value="{Boolean}true" />
+																																													</items>
+																																												</column>
+																																											</items>
+																																										</field>
+																																									</listItemsTertiaryContainer>
+																																								</items>
+																																							</column>
+																																						</items>
+																																					</listItemsTertiary>
+																																				</items>
+																																			</column>
+																																		</items>
+																																	</field>
+																																</listItemsSecondaryContainer>
+																															</items>
+																														</column>
+																													</items>
+																												</listItemsSecondary>
+																											</items>
+																										</column>
+																									</items>
+																								</field>
+																							</listItemsCategoriesContainer>
+																						</items>
+																					</column>
+																				</items>
+																			</listItemsCategories>
+																		</items>
+																	</column>
+																</items>
+															</field>
+														</listItemsPrimaryContainer>
+				                        	</items>
+				                    </opcionMenuTab>
+		                	</items>
+		            </tabs>
+				</items>
+            </container>
+        </items>
+    </content>
+</jcr:root>
