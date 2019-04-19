@@ -3,11 +3,13 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:template="/conf/sep/settings/wcm/templates/root-page"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="sep/components/structure/page">
+        sling:resourceType="/apps/sep/components/structure/root">
         <root
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            sling:resourceType="wcm/foundation/components/responsivegrid"
+            editable="{Boolean}true"/>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone

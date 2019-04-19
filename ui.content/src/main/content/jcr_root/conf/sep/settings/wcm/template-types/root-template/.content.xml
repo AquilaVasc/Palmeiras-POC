@@ -4,7 +4,7 @@
     jcr:primaryType="cq:Template"
     ranking="{Long}1">
     <jcr:content
-        jcr:description="Generic template for web pages"
+        jcr:description="This is a page component for Base Template which will be referenced by other root templates."
         jcr:primaryType="cq:PageContent"
-        jcr:title="Sociedade Esportiva Palmeiras Empty Page"/>
+        jcr:title="SOCIEDADE ESPORTIVA PALMEIRAS - Root Template Type"/>
 </jcr:root>

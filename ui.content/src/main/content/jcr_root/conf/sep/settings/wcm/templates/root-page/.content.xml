@@ -2,9 +2,10 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Template">
     <jcr:content
-        cq:templateType="/conf/sep/settings/wcm/template-types/content-page"
-        jcr:description="Simple content page for Sociedade Esportiva Palmeiras"
+        cq:lastModified="{Date}2019-04-18T15:58:29.812-03:00"
+        cq:lastModifiedBy="admin"
+        cq:templateType="/conf/sep/settings/wcm/template-types/root-template"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Content Page"
+        jcr:title="Root Page"
         status="enabled"/>
 </jcr:root>

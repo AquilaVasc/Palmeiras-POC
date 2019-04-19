@@ -1,51 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
-    jcr:mixinTypes="[rep:AccessControllable]"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
-    <sep jcr:primaryType="nt:unstructured">
-        <components jcr:primaryType="nt:unstructured">
-            <form jcr:primaryType="nt:unstructured">
-                <container jcr:primaryType="nt:unstructured">
-                    <form-container
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="Sociedade Esportiva Palmeiras Form"
-                        sling:resourceType="wcm/core/components/policy/policy"
-                        components="[/apps/sep/components/form/button,/apps/sep/components/form/hidden,/apps/sep/components/form/options,/apps/sep/components/form/text]">
-                        <jcr:content jcr:primaryType="nt:unstructured"/>
-                    </form-container>
-                </container>
-            </form>
-        </components>
-    </sep>
     <wcm jcr:primaryType="nt:unstructured">
         <foundation jcr:primaryType="nt:unstructured">
             <components jcr:primaryType="nt:unstructured">
                 <responsivegrid jcr:primaryType="nt:unstructured">
-                    <content-default
-                        jcr:description="Policy for editable layout containers"
+                    <policy_280590991063000
+                        jcr:lastModified="{Date}2019-04-18T15:58:29.810-03:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Sociedade Esportiva Palmeiras Default"
+                        jcr:title="Root Policy"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:SEP,/apps/sep/components/form/container]"
-                        policyResourceType="wcm/foundation/components/responsivegrid">
-                        <cq:authoring jcr:primaryType="nt:unstructured">
-                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
-                                <image
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="image/*"
-                                    droptarget="image"
-                                    resourceType="sep/components/content/image"
-                                    type="Images"/>
-                            </assetToComponentMapping>
-                        </cq:authoring>
-                        <jcr:content
-                            jcr:primaryType="nt:unstructured"
-                            mergeList="{Boolean}true"/>
-                    </content-default>
+                        components="[group:SEP]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_280590991063000>
+                    <policy_280973303005800
+                        jcr:lastModified="{Date}2019-04-18T16:02:50.940-03:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="General Page Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:SEP]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_280973303005800>
                 </responsivegrid>
             </components>
         </foundation>
     </wcm>
-    <rep:policy/>
 </jcr:root>
