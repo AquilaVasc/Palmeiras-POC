@@ -13,10 +13,13 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package sep.aem.SEP.core.schedulers;
+package com.aem.sep.core.schedulers;
 
 import org.junit.Rule;
 import org.junit.Test;
+
+import com.aem.sep.core.schedulers.SimpleScheduledTask;
+
 import uk.org.lidalia.slf4jext.Level;
 import uk.org.lidalia.slf4jtest.LoggingEvent;
 import uk.org.lidalia.slf4jtest.TestLogger;

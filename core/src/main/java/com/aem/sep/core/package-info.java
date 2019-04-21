@@ -14,6 +14,6 @@
  *  limitations under the License.
  */
 @Version("1.0")
-package sep.aem.SEP.core;
+package com.aem.sep.core;
 
 import org.osgi.annotation.versioning.Version;

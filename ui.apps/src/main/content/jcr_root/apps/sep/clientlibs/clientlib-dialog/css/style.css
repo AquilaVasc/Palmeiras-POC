@@ -1,0 +1,18 @@
+coral-panelstack[maximized] > coral-panel > coral-panel-content {
+    overflow: unset;
+}
+
+.att-dialog-heading {
+	margin: 20px 5px 10px 5px;
+}
+
+.att-dialog-float-right {
+    display: inline-block !important;
+    float: right;
+	width: 49%;
+}
+
+.att-dialog-float-left {
+    display: inline-block !important;
+	width: 49%;
+}

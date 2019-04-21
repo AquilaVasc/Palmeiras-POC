@@ -1,7 +1,8 @@
 <meta charset="UTF-8"/>
 
 <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
-     data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"/>
+     data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"
+     data-sly-use.c="com.aem.sep.core.models.Menu"/>
 
 <nav class="pushy pushy-left">
 	<ul>
@@ -42,8 +43,8 @@
 	<div class="navigation container">
 		<div class="row">
 			<div class="logo col-md-2 col-sm-6 col-6">
-				<a href="https://socio-palmeiras.futebolcard.com">
-					<img src="https://socio-palmeiras.futebolcard.com/avanti/img/logo.png" alt="">
+				<a href="${properties.logoLink}">
+					<img src="${properties.logoImage}" alt="${properties.logoAlt}" target="${properties.logoTarget}">
 				</a>
 			</div>
 	

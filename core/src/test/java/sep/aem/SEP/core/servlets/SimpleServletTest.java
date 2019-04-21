@@ -13,13 +13,15 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package sep.aem.SEP.core.servlets;
+package com.aem.sep.core.servlets;
 
 import org.apache.sling.testing.mock.sling.junit.SlingContext;
 import org.apache.sling.testing.mock.sling.servlet.MockSlingHttpServletRequest;
 import org.apache.sling.testing.mock.sling.servlet.MockSlingHttpServletResponse;
 import org.junit.Rule;
 import org.junit.Test;
+
+import com.aem.sep.core.servlets.SimpleServlet;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
