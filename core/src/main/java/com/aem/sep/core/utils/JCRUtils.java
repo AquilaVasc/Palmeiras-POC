@@ -1,4 +1,4 @@
-package sep.aem.SEP.core.utils;
+package com.aem.sep.core.utils;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
@@ -8,6 +8,19 @@ import org.apache.sling.api.resource.Resource;
 
 public class JCRUtils {
 
+	/**
+	 * @param node
+	 * @param propertyName
+	 * @return property value from node
+	 */
+	public static String getPropertyFromNode(Node node, String propertyName) {
+        try {
+            return node.hasProperty(propertyName) && node.getProperty(propertyName) != null ? node.getProperty(propertyName).getValue().toString() : StringUtils.EMPTY ;
+        } catch (Exception e) {
+            return StringUtils.EMPTY;
+        }
+    }
+	
     public static boolean checkIsJcrContentNodeFromResource(final Resource resource) {
         Node node = resource.adaptTo(Node.class);
         try {
