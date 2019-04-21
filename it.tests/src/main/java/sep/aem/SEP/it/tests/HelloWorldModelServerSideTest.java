@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package sep.aem.SEP.it.tests;
+package com.aem.sep.it.tests;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -32,7 +32,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import sep.aem.SEP.core.models.HelloWorldModel;
+import com.aem.sep.core.models.HelloWorldModel;
 
 /** 
  *  Test case which uses OSGi services injection

@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package sep.aem.SEP.core.listeners;
+package com.aem.sep.core.listeners;
 
 import org.apache.sling.api.SlingConstants;
 import org.osgi.framework.Constants;
