@@ -3,7 +3,7 @@
      data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"
       data-sly-use.card="com.osf.core.models.Card"/>
 
-<div class="box">
+<div data-sly-test="${properties.title}" class="box">
 	<a href="${card.linktoLink}">
    		<h3>${card.title}</h3>
    		<p></p>

@@ -5,11 +5,11 @@
      
 <div data-sly-use.container="com.adobe.cq.wcm.core.components.models.form.Container"
      data-sly-use.grid="com.day.cq.wcm.foundation.model.responsivegrid.ResponsiveGrid"
-     class="${gird.cssClass}">
-	<div class="planos">
+     class="${gird.cssClass} container">
+	<div class="row justify-content-center">
 	  	<sly data-sly-repeat.paragraph="${grid.paragraphs}"
-         data-sly-resource="${paragraph.path @ resourceType=paragraph.resourceType, decoration='true', cssClassName=paragraph.cssClass}"></sly>
-        <sly data-sly-test="${wcmmode.edit || wcmmode.preview}"
-        	data-sly-resource="${resource.path @ resourceType=container.resourceTypeForDropArea, appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}"></sly>
+         data-sly-resource="${paragraph.path @ resourceType=paragraph.resourceType, decoration='true', cssClassName=paragraph.cssClass}"></sly>        
 	</div>
+	<sly data-sly-test="${wcmmode.edit || wcmmode.preview}"
+        	data-sly-resource="${resource.path @ resourceType=container.resourceTypeForDropArea, appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}"></sly>
 </div>
