@@ -1,10 +1,23 @@
 package com.aem.sep.core.dao;
 
-public class iconCTA {
+public class IconCTA {
 
 	private String icon;
 	private String link;
 	private String target;
+	
+	/**
+	 * CONSTRUCTOR
+	 * @param icon
+	 * @param link
+	 * @param target
+	 */
+	public IconCTA(String icon, String target, String link) {
+		super();
+		this.icon = icon;
+		this.link = link;
+		this.target = target;
+	}
 	
 	/**
 	 * GETTERS AND SETTERS
