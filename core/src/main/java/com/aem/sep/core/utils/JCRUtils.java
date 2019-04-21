@@ -1,5 +1,7 @@
 package com.aem.sep.core.utils;
 
+import java.util.Iterator;
+
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 
@@ -18,6 +20,25 @@ public class JCRUtils {
             return node.hasProperty(propertyName) && node.getProperty(propertyName) != null ? node.getProperty(propertyName).getValue().toString() : StringUtils.EMPTY ;
         } catch (Exception e) {
             return StringUtils.EMPTY;
+        }
+    }
+	
+	public static Iterator<Resource> getIteratorFromResource(Resource resource, String propertyName) {
+        try {
+            Resource list = resource.getChild(propertyName);
+            if (list != null) {
+                Iterable<Resource> iterable = list.getChildren();
+                if (iterable != null) {
+                    Iterator<Resource> iterator = iterable.iterator();
+                    return iterator;
+                } else {
+                    return null;
+                }
+            } else {
+                return null;
+            }
+        } catch (Exception e) {
+            return null;
         }
     }
 	

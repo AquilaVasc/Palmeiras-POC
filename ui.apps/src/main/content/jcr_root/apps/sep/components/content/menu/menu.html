@@ -2,18 +2,13 @@
 
 <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
      data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"
-     data-sly-use.c="com.aem.sep.core.models.Menu"/>
+     data-sly-use.component="com.aem.sep.core.models.Menu"/>
 
-<nav class="pushy pushy-left">
-	<ul>
-		<li class="pushy-link"><a href="https://socio-palmeiras.futebolcard.com">Home</a></li>
-		<li class="pushy-link"><a href="https://socio-palmeiras.futebolcard.com/info/program">O Programa</a></li>
-		<li class="pushy-link"><a href="https://socio-palmeiras.futebolcard.com/register">Seja sócio</a></li>
-		<li class="pushy-link"><a href="https://socio-palmeiras.futebolcard.com/info/benefits?category=0">Benefícios</a></li>
-		<li class="pushy-link"><a href="http://www.clubedevantagensavanti.com.br" target="_blank">Clube de Vantagens</a></li>
-		<li class="pushy-link"><a href="http://bit.ly/2YBtckC" target="_blank">Palmeiras Store</a></li>
-		<li class="pushy-link"><a href="http://www.palmeirastour.com.br/" target="_blank">Palmeiras Tour</a></li>
-		<li class="pushy-link"><a href="https://socio-palmeiras.futebolcard.com/customer-service">Atendimento</a></li>
+<nav data-sly-test="${component.model.menu}" class="pushy pushy-left">
+	<ul data-sly-list.menu="${component.model.menu}">
+		<li class="pushy-link">
+			<a href="${menu.link}" target="${menu.target}">${menu.text}</a>
+		</li>
 	</ul>
 </nav>
 
@@ -22,18 +17,15 @@
 		<div class="container">
 			<div class="row no-gutters">
 				<div class="col-12 col-xs-12 col-sm-2 col-md-2 text-center text-sm-left sociais_header">
-					<a target="_blank" href="https://twitter.com/avantipalmeiras/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-					<a target="_blank" href="https://www.facebook.com/avantipalmeiras/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<sly data-sly-list.social="${component.model.social}" data-sly-unwrap>
+						<a target="${social.target}" href="${social.link}"><i class="${social.icon}" aria-hidden="true"></i></a>
+					</sly>
 				</div>
 	
 				<div class="col-12 col-xs-12 col-sm-10 col-md-10 text-center text-sm-right">
 					<ul>
-						<li>
-							<a href="https://socio-palmeiras.futebolcard.com/login">
-								<i class="fa fa-lock" aria-hidden="true"></i> Entrar
-							</a>
-						</li>
-						<li><a href="https://socio-palmeiras.futebolcard.com/register"><i class="fa fa-list-alt" aria-hidden="true"></i> &nbsp; Associe-se</a></li>
+						<li><a href="${menu.login.link}" target="${menu.login.target}"><i class="fa fa-lock" aria-hidden="true"></i> &nbsp; Entrar</a></li>
+						<li><a href="${menu.associate.link}" target="${menu.associate.target}"><i class="fa fa-list-alt" aria-hidden="true"></i> &nbsp; Associe-se</a></li>
 					</ul>
 				</div>
 			</div>
@@ -42,25 +34,24 @@
 	
 	<div class="navigation container">
 		<div class="row">
-			<div class="logo col-md-2 col-sm-6 col-6">
-				<a href="${properties.logoLink}">
-					<img src="${properties.logoImage}" alt="${properties.logoAlt}" target="${properties.logoTarget}">
+			<div data-sly-test="${properties.logoPosition == 'left'}" class="logo col-md-2 col-sm-6 col-6">
+				<a href="${component.model.logo.link}">
+					<img src="${component.model.logo.image}" alt="${component.model.logo.alt}" target="${component.model.logo.target}">
 				</a>
 			</div>
 	
-			<div class="col-md-10 text-right d-none d-lg-block">
-				<nav>
-					<ul>
-						<li><a href="https://socio-palmeiras.futebolcard.com">Home</a></li>
-						<li><a href="https://socio-palmeiras.futebolcard.com/info/program">O Programa</a></li>
-						<li><a href="https://socio-palmeiras.futebolcard.com/register">Seja sócio</a></li>
-						<li><a href="https://socio-palmeiras.futebolcard.com/info/benefits?category=0">Benefícios</a></li>
-						<li><a href="http://www.clubedevantagensavanti.com.br" target="_blank">Clube de Vantagens</a></li>
-						<li><a href="http://bit.ly/2YBtckC" target="_blank">Palmeiras Store</a></li>
-						<li><a href="http://www.palmeirastour.com.br/" target="_blank">Palmeiras Tour</a></li>
-						<li><a href="https://socio-palmeiras.futebolcard.com/customer-service">Atendimento</a></li>
+			<div class="col-md-10 text-left d-none d-lg-block" style="padding-left: 32px;">
+				<nav data-sly-test="${component.model.menu}">
+					<ul data-sly-list.menu="${component.model.menu}">
+						<li><a href="${menu.link}" target="${menu.target}">${menu.text}</a></li>
 					</ul>
 				</nav>
+			</div>
+			
+			<div data-sly-test="${properties.logoPosition == 'right'}" class="logo col-md-2 col-sm-6 col-6">
+				<a href="${component.model.logo.link}">
+					<img src="${component.model.logo.image}" alt="${component.model.logo.alt}" target="${component.model.logo.target}">
+				</a>
 			</div>
 	
 			<div class="col text-right d-block d-lg-none">

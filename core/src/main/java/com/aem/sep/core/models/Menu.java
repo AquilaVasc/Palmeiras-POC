@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.aem.sep.core.dao.MenuDAO;
-import com.aem.sep.core.services.MenuService;
+import com.aem.sep.core.interfaces.iMenu;
 
 @Model(
         adaptables = Resource.class,
@@ -25,7 +25,7 @@ public class Menu {
 	private Resource resource;
 	
 	@Inject
-	private MenuService service;
+	private iMenu service;
 	
 	@PostConstruct
 	public void init() {
