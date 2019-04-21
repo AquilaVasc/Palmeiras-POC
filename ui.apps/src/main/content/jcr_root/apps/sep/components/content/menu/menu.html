@@ -24,15 +24,15 @@
 	
 				<div class="col-12 col-xs-12 col-sm-10 col-md-10 text-center text-sm-right">
 					<ul>
-						<li><a href="${menu.login.link}" target="${menu.login.target}"><i class="fa fa-lock" aria-hidden="true"></i> &nbsp; Entrar</a></li>
-						<li><a href="${menu.associate.link}" target="${menu.associate.target}"><i class="fa fa-list-alt" aria-hidden="true"></i> &nbsp; Associe-se</a></li>
+						<li><a href="${component.model.login.link || '#'}" target="${component.model.login.target}"><i class="fa fa-lock" aria-hidden="true"></i> &nbsp; ${'login' @ i18n}</a></li>
+						<li><a href="${component.model.associate.link || '#'}" target="${component.model.associate.target}"><i class="fa fa-list-alt" aria-hidden="true"></i> &nbsp; ${'be.an.associate' @ i18n}</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="navigation container">
+	<div data-sly-test="${component.model.menu}" class="navigation container">
 		<div class="row">
 			<div data-sly-test="${properties.logoPosition == 'left'}" class="logo col-md-2 col-sm-6 col-6">
 				<a href="${component.model.logo.link}">
@@ -41,7 +41,7 @@
 			</div>
 	
 			<div class="col-md-10 text-left d-none d-lg-block" style="padding-left: 32px;">
-				<nav data-sly-test="${component.model.menu}">
+				<nav>
 					<ul data-sly-list.menu="${component.model.menu}">
 						<li><a href="${menu.link}" target="${menu.target}">${menu.text}</a></li>
 					</ul>
