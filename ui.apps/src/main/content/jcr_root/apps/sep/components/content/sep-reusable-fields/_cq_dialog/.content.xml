@@ -17,28 +17,16 @@
 	                <format
 	                    jcr:primaryType="nt:unstructured"
 	                    features="*"/>
-		      		<lists
-		        		jcr:primaryType="nt:unstructured"
-		          		features="*"/>
-	                <links
-	                    jcr:primaryType="nt:unstructured"
-	                    features="*"/>
 	            </rtePlugins>
 	            <uiSettings jcr:primaryType="nt:unstructured">
 	                <cui jcr:primaryType="nt:unstructured">
 	                    <inline
 	                        jcr:primaryType="nt:unstructured"
-	                        toolbar="[format#bold,format#italic,format#underline,links#modifylink,links#unlink,links#anchor,#lists]">
-	                        <popovers jcr:primaryType="nt:unstructured">
-		                    	<lists
-		                     		jcr:primaryType="nt:unstructured"
-		                      		items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
-		                         	ref="lists"/>
-	                        </popovers> 
+	                        toolbar="[format#bold,format#italic,format#underline]">
 	                    </inline>
 	                    <fullScreen
 	                        jcr:primaryType="nt:unstructured"
-	                        toolbar="[format#bold,format#italic,format#underline,links#modifylink,links#unlink,links#anchor,#lists]"/>
+	                        toolbar="[format#bold,format#italic,format#underline]"/>
 	                </cui>
 	            </uiSettings>
 	        </simpleRichtext>
