@@ -16,7 +16,7 @@
 				</div>
 				<div class="col-md-8 col-sm-8 col-xs-12 text">
 					<h2><strong>${properties.subtitle}</strong></h2>
-					<div class="text-justify">${properties.description @ context='html'}</div>
+					<p class="text-justify">${properties.description @ context='html'}</p>
 				</div>
 				<div data-sly-test="${properties.imagePosition == 'right'}" class="col-md-4 col-sm-4 col-xs-12 ico text-center" style="padding-top: 32px;">
 					<img src="${properties.image}" class="img-fluid" alt="${properties.imageAlt}">
