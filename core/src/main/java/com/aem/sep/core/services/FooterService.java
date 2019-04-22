@@ -63,7 +63,7 @@ public class FooterService implements iFooter {
 	
 	/**
 	 * @param resource
-	 * @return menu list
+	 * @return footerList
 	 */
 	private List<LinkCTA> getMenuList(Resource resource) {
 		List<LinkCTA> footerList = Collections.emptyList();
@@ -94,7 +94,7 @@ public class FooterService implements iFooter {
 	
 	/**
 	 * @param resource
-	 * @return social list
+	 * @return socialList
 	 */
 	private List<IconCTA> getSocialList(Resource resource) {
 		List<IconCTA> socialList = Collections.emptyList();

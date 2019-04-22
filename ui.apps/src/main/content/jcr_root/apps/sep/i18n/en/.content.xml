@@ -3,13 +3,12 @@
     jcr:language="en"
     jcr:mixinTypes="[mix:language]"
     jcr:primaryType="sling:Folder">
-
-	<login
+	<login_text
         jcr:primaryType="sling:MessageEntry"
-        sling:key="login"
+        sling:key="login.text"
         sling:message="Login"/>
-    <be_an_associate
+    <associate_text
         jcr:primaryType="sling:MessageEntry"
-        sling:key="be.an.associate"
+        sling:key="associate.text"
         sling:message="Be an Associate"/>
 </jcr:root>

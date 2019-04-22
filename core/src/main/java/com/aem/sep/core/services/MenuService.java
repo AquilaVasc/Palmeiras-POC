@@ -49,7 +49,6 @@ public class MenuService implements iMenu{
 	/**
 	 * @param node
 	 * @param resource
-	 * @param resourceResolver
 	 * @return model
 	 */
 	private MenuDAO create(Node node, Resource resource) {
@@ -82,7 +81,7 @@ public class MenuService implements iMenu{
 	
 	/**
 	 * @param resource
-	 * @return menu list
+	 * @return menuList
 	 */
 	private List<LinkCTA> getMenuList(Resource resource) {
 		List<LinkCTA> menuList = Collections.emptyList();
@@ -113,7 +112,7 @@ public class MenuService implements iMenu{
 	
 	/**
 	 * @param resource
-	 * @return social list
+	 * @return socialList
 	 */
 	private List<IconCTA> getSocialList(Resource resource) {
 		List<IconCTA> socialList = Collections.emptyList();

@@ -8983,6 +8983,10 @@ strong {
     font-family: open_sansbold, sans-serif
 }
 
+.banner_rotativo {
+	display: none;
+}
+
 .banner_rotativo .carousel-inner .cloneditem-1,
 .banner_rotativo .carousel-inner .cloneditem-2,
 .banner_rotativo .carousel-inner .cloneditem-3 {
@@ -10150,12 +10154,6 @@ all and (min-width:992px) and (-webkit-transform-3d) {
 .page-wrap {
     min-height: 100%;
     margin-bottom: -155px
-}
-
-.page-wrap:after {
-    content: "";
-    height: 155px;
-    display: block
 }
 
 .footer {

@@ -62,53 +62,38 @@ function showModalStateNotPermitted() {
     
 }
 
-setMaskForms();
-
 $(document).ready(function () {
 
     AOS.init();
 
     showScores();
 
-    $('.datepicker--month').datepicker({
-        autoclose: true,
-        viewMode: 1,
-        minViewMode: 1,
-        format: 'mm/yyyy'
-    });
-
-    $('.datepicker').datepicker({
-        autoclose: true,
-        viewMode: 0,
-        minViewMode: 0,
-        format: 'dd/mm/yyyy'
-    });
-
     $('.responsive_link').click(function () {
         $('.responsive_nav').toggleClass('open');
     });
 
-
-    //$('.banner_rotativo').carousel('cycle');
-    $('.new_carousel').slick({
-        prevArrow: '.prev-arrow',
-        nextArrow: '.next-arrow',
-        dots:true,
-        infinite: true,
-        autoplay: true,
-        arrows: true,
-        responsive: [
-        { 
-            breakpoint: 576,
-            settings: {
-                dots: false,
-            }
-
-        }]
-
-    });
-
-    $('.has-error').tooltip();
+    let carouselLength = $('.new_carousel').find('.item').length; 
+    if(carouselLength > 1) {
+	    $('.new_carousel').slick({
+	        prevArrow: '.prev-arrow',
+	        nextArrow: '.next-arrow',
+	        dots:true,
+	        infinite: true,
+	        autoplay: true,
+	        arrows: true,
+	        responsive: [
+	        { 
+	            breakpoint: 576,
+	            settings: {
+	                dots: false,
+	            }
+	
+	        }]
+	    });
+	    $('.banner_rotativo').show();
+    } else if(carouselLength == 1) {
+	    $('.banner_rotativo').show();
+    }
 
     $('.list_parceiros').slick({
         slidesToShow: 4,
@@ -128,6 +113,7 @@ $(document).ready(function () {
 
     });
 
+    $('.has-error').tooltip();
 }); 
 
 // Hidding antecipate message
