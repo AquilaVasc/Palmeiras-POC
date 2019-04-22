@@ -3,7 +3,7 @@
 <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
      data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"/>
 
-<input type="hidden" value="${properties.modalImageDesktop}" class="backgroudImage"/>
+<input data-id="${currentNode.identifier}" type="hidden" value="${properties.modalImageDesktop}" class="backgroudImage"/>
 <div class="interna w-100">
 	<div data-sly-test="${properties.title}" class="topo">
 		<h2>
@@ -24,5 +24,5 @@
 	</section>
 </div>
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
-    <sly data-sly-call="${clientlib.js @ categories='container.backgroud'}"/>
+    <sly data-sly-call="${clientlib.js @ categories='container.backgroud.plans'}"/>
 </sly>
