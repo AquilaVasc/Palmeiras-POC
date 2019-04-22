@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Menu"
+    width="777px"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+			<include-clientlibs 
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+				categories="sep.dialog-styles"/>
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                	<tabs
+		                jcr:primaryType="nt:unstructured"
+		                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+		                maximized="{Boolean}true">
+		                <items jcr:primaryType="nt:unstructured">
+		                	<member
+				            	jcr:primaryType="nt:unstructured"
+				                jcr:title="Entrar e Associar-se"
+				                sling:resourceType="granite/ui/components/coral/foundation/container"
+		                        margin="{Boolean}true">
+		                        <items jcr:primaryType="nt:unstructured">
+									<headingLogin
+					                	granite:class="att-dialog-heading"
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/heading"
+										level="{Long}4" 
+										text="Configuração do botão de login"/>
+									<loginLink 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+										fieldLabel="URL do Link" 
+										name="./loginLink" 
+										required="{Boolean}true"
+										rootPath="/content/sep"/>
+									<loginTarget 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/select"
+										fieldLabel="Abrir ao clicar" 
+										name="./loginTarget">
+										<items jcr:primaryType="nt:unstructured">
+											<blank 
+												jcr:primaryType="nt:unstructured"
+												text="Abrir em uma nova aba" 
+												value="_blank"
+												selected="{Boolean}true"/>
+											<self 
+												jcr:primaryType="nt:unstructured" 
+												text="Abrir na mesma aba"
+												value="_self"/>
+										</items>
+									</loginTarget>
+									<headingAssociate
+					                	granite:class="att-dialog-heading"
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/heading"
+										level="{Long}4" 
+										text="Configuração do botão de Associar-se"/>
+									<associateLink 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+										fieldLabel="URL do Link" 
+										name="./associateLink" 
+										required="{Boolean}true"
+										rootPath="/content/sep"/>
+									<associateTarget 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/select"
+										fieldLabel="Abrir ao clicar" 
+										name="./associateTarget">
+										<items jcr:primaryType="nt:unstructured">
+											<blank 
+												jcr:primaryType="nt:unstructured"
+												text="Abrir em uma nova aba" 
+												value="_blank"
+												selected="{Boolean}true"/>
+											<self 
+												jcr:primaryType="nt:unstructured" 
+												text="Abrir na mesma aba"
+												value="_self"/>
+										</items>
+									</associateTarget>
+								</items>
+		                	</member>
+		                	<logo
+				            	jcr:primaryType="nt:unstructured"
+				                jcr:title="Logo"
+				                sling:resourceType="granite/ui/components/coral/foundation/container"
+		                        margin="{Boolean}true">
+		                        <items jcr:primaryType="nt:unstructured">
+									<position 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/select"
+										fieldLabel="Posição da Logo" 
+										name="./logoPosition">
+										<items jcr:primaryType="nt:unstructured">
+											<left 
+												jcr:primaryType="nt:unstructured"
+												text="Esquerda" 
+												value="left"
+												selected="{Boolean}true"/>
+											<right 
+												jcr:primaryType="nt:unstructured" 
+												text="Direita"
+												value="right"/>
+										</items>
+									</position>
+									<headingLogin
+					                	granite:class="att-dialog-heading"
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/heading"
+										level="{Long}4" 
+										text="Configuração da imagem de Logo"/>
+									<image 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+										fieldLabel="Imagem" 
+										name="./logoImage" 
+										required="{Boolean}true"
+										rootPath="/content/dam/sep"/>
+									<link 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+										fieldLabel="URL do Link" 
+										name="./logoLink" 
+										required="{Boolean}true"
+										rootPath="/content/sep"/>
+									<alt
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										fieldLabel="Texto alternativo da Imagem" 
+										name="./logoAlt"/>
+									<target 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/select"
+										fieldLabel="Abrir ao clicar" 
+										name="./logoTarget">
+										<items jcr:primaryType="nt:unstructured">
+											<blank 
+												jcr:primaryType="nt:unstructured"
+												text="Abrir em uma nova aba" 
+												value="_blank"
+												selected="{Boolean}true"/>
+											<self 
+												jcr:primaryType="nt:unstructured" 
+												text="Abrir na mesma aba"
+												value="_self"/>
+										</items>
+									</target>
+								</items>
+		                	</logo>
+		                	<menuItems
+				          		jcr:primaryType="nt:unstructured"
+				    			jcr:title="Itens do Menu"
+				            	sling:resourceType="granite/ui/components/coral/foundation/container"
+				            	margin="{Boolean}true">
+				            	<items jcr:primaryType="nt:unstructured">
+		                			<multifield
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+										composite="{Boolean}true" 
+										eaem-show-on-collapse="EAEM.showProductName"
+										fieldLabel="Lista de itens do menu">
+										<field 
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/container"
+											name="./menuList">
+											<items jcr:primaryType="nt:unstructured">
+												<column
+													granite:class="foundation-layout-util-maximized-alt coral-Form-fieldwrapper"
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/container">
+													<items jcr:primaryType="nt:unstructured">
+														<heading
+				                							granite:class="att-dialog-heading"
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/heading"
+															level="{Long}4" 
+															text="Item da lista"/>
+														<text 
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+															fieldLabel="Texto" 
+															required="{Boolean}true"
+															name="./menuText"/>
+														<link 
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+															fieldLabel="URL do Link" 
+															name="./menuLink" 
+															required="{Boolean}true"
+															rootPath="/content/sep"/>
+														<target 
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/form/select"
+															fieldLabel="Abrir ao clicar" 
+															name="./menuTarget">
+															<items jcr:primaryType="nt:unstructured">
+																<blank 
+																	jcr:primaryType="nt:unstructured"
+																	text="Abrir em uma nova aba" 
+																	value="_blank"
+																	selected="{Boolean}true"/>
+																<self 
+																	jcr:primaryType="nt:unstructured" 
+																	text="Abrir na mesma aba"
+																	value="_self"/>
+															</items>
+														</target>
+													</items>
+												</column>
+											</items>
+										</field>
+									</multifield>
+		                		</items>
+		                	</menuItems>
+		                	<social
+				          		jcr:primaryType="nt:unstructured"
+				    			jcr:title="Mídias Sociais"
+				            	sling:resourceType="granite/ui/components/coral/foundation/container"
+				            	margin="{Boolean}true">
+				            	<items jcr:primaryType="nt:unstructured">
+		                			<multifield
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+										composite="{Boolean}true" 
+										eaem-show-on-collapse="EAEM.showProductName"
+										fieldLabel="Lista de ícones sociais">
+										<field 
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/container"
+											name="./socialList">
+											<items jcr:primaryType="nt:unstructured">
+												<column
+													granite:class="foundation-layout-util-maximized-alt coral-Form-fieldwrapper"
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/container">
+													<items jcr:primaryType="nt:unstructured">
+														<heading
+				                							granite:class="att-dialog-heading"
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/heading"
+															level="{Long}4" 
+															text="Item da lista"/>
+														<icons 
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="acs-commons/components/authoring/graphiciconselect"
+															fieldLabel="Ícones" 
+															name="./socialIcon"
+															required="{Boolean}true">
+															<datasource 
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+																path="/etc/acs-commons/lists/font-awesome-icons"/>
+														</icons>
+														<link 
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+															fieldLabel="URL do Link" 
+															name="./socialLink" 
+															required="{Boolean}true"
+															rootPath="/content/sep"/>
+														<target 
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/form/select"
+															fieldLabel="Abrir ao clicar" 
+															name="./socialTarget">
+															<items jcr:primaryType="nt:unstructured">
+																<blank 
+																	jcr:primaryType="nt:unstructured"
+																	text="Abrir em uma nova aba" 
+																	value="_blank"
+																	selected="{Boolean}true"/>
+																<self 
+																	jcr:primaryType="nt:unstructured" 
+																	text="Abrir na mesma aba"
+																	value="_self"/>
+															</items>
+														</target>
+													</items>
+												</column>
+											</items>
+										</field>
+									</multifield>
+		                		</items>
+		                	</social>
+		                </items>
+		            </tabs>
+				</items>
+            </container>
+        </items>
+    </content>
+</jcr:root>

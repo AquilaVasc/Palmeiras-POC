@@ -13,9 +13,9 @@ public enum MenuEnum {
 	LOGO_TARGET("logoTarget"),
 	
 	MENU_LIST("menuList"),
-	MENU_TEXT("menuItemText"),
-	MENU_LINK("menuItemLink"),
-	MENU_TARGET("menuItemTarget"),
+	MENU_TEXT("menuText"),
+	MENU_LINK("menuLink"),
+	MENU_TARGET("menuTarget"),
 	
 	SOCIAL_LIST("socialList"),
 	SOCIAL_ICON("socialIcon"),

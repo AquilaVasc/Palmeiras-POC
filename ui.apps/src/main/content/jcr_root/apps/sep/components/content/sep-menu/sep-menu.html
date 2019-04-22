@@ -1,0 +1,64 @@
+<meta charset="UTF-8"/>
+
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"
+     data-sly-use.component="com.aem.sep.core.models.Menu"/>
+
+<nav data-sly-test="${component.model.menu}" class="pushy pushy-left">
+	<ul data-sly-list.menu="${component.model.menu}">
+		<li class="pushy-link">
+			<a href="${menu.link}" target="${menu.target}">${menu.text}</a>
+		</li>
+	</ul>
+</nav>
+
+<header class="main_header w-100">
+	<div class="member_area">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-12 col-xs-12 col-sm-2 col-md-2 text-center text-sm-left sociais_header">
+					<sly data-sly-list.social="${component.model.social}" data-sly-unwrap>
+						<a target="${social.target}" href="${social.link}"><i class="${social.icon}" aria-hidden="true"></i></a>
+					</sly>
+				</div>
+	
+				<div class="col-12 col-xs-12 col-sm-10 col-md-10 text-center text-sm-right">
+					<ul>
+						<li><a href="${component.model.login.link || '#'}" target="${component.model.login.target}"><i class="fa fa-lock" aria-hidden="true"></i> &nbsp; ${'login' @ i18n}</a></li>
+						<li><a href="${component.model.associate.link || '#'}" target="${component.model.associate.target}"><i class="fa fa-list-alt" aria-hidden="true"></i> &nbsp; ${'be.an.associate' @ i18n}</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div data-sly-test="${component.model.menu}" class="navigation container">
+		<div class="row">
+			<div data-sly-test="${properties.logoPosition == 'left'}" class="logo col-md-2 col-sm-6 col-6">
+				<a href="${component.model.logo.link}">
+					<img src="${component.model.logo.image}" alt="${component.model.logo.alt}" target="${component.model.logo.target}">
+				</a>
+			</div>
+	
+			<div class="col-md-10 text-left d-none d-lg-block" style="padding-left: 32px;">
+				<nav>
+					<ul data-sly-list.menu="${component.model.menu}">
+						<li><a href="${menu.link}" target="${menu.target}">${menu.text}</a></li>
+					</ul>
+				</nav>
+			</div>
+			
+			<div data-sly-test="${properties.logoPosition == 'right'}" class="logo col-md-2 col-sm-6 col-6">
+				<a href="${component.model.logo.link}">
+					<img src="${component.model.logo.image}" alt="${component.model.logo.alt}" target="${component.model.logo.target}">
+				</a>
+			</div>
+	
+			<div class="col text-right d-block d-lg-none">
+				<a href="#" class="responsive_link menu-btn">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</header>

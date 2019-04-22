@@ -1,0 +1,25 @@
+<meta charset="UTF-8"/>
+
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"
+     data-sly-use.component="com.aem.sep.core.models.Footer"/>
+     
+<footer data-sly-test="${component.model.copyright}" class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center font-weight-bold">
+				<ul data-sly-list.footer="${component.model.footer}">
+					<li><a href="${footer.link}" target="${footer.target}">${footer.text}</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<p>${component.model.copyright}</p>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12 copyright">
+				<p data-sly-list.social="${component.model.social}">
+					<a href="${social.link}" target="${social.target}"><i class="${social.icon}" aria-hidden="true"></i></a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
