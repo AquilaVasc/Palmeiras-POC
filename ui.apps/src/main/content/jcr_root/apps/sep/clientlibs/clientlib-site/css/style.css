@@ -10152,12 +10152,6 @@ all and (min-width:992px) and (-webkit-transform-3d) {
     margin-bottom: -155px
 }
 
-.page-wrap:after {
-    content: "";
-    height: 155px;
-    display: block
-}
-
 .footer {
     height: 155px;
     background: #02512a;
