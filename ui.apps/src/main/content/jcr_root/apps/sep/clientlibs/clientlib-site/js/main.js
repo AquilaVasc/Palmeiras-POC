@@ -62,27 +62,11 @@ function showModalStateNotPermitted() {
     
 }
 
-setMaskForms();
-
 $(document).ready(function () {
 
     AOS.init();
 
     showScores();
-
-    $('.datepicker--month').datepicker({
-        autoclose: true,
-        viewMode: 1,
-        minViewMode: 1,
-        format: 'mm/yyyy'
-    });
-
-    $('.datepicker').datepicker({
-        autoclose: true,
-        viewMode: 0,
-        minViewMode: 0,
-        format: 'dd/mm/yyyy'
-    });
 
     $('.responsive_link').click(function () {
         $('.responsive_nav').toggleClass('open');

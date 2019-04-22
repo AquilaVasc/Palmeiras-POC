@@ -1,4 +1,5 @@
 #base=css
 less/grid.less
 vendor.min.css
+slick.css
 style.css
