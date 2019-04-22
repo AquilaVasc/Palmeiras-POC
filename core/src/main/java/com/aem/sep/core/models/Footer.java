@@ -9,34 +9,34 @@ import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.aem.sep.core.dao.MenuDAO;
-import com.aem.sep.core.interfaces.iMenu;
+import com.aem.sep.core.dao.FooterDAO;
+import com.aem.sep.core.interfaces.iFooter;
 
 @Model(
         adaptables = Resource.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class Menu {
+public class Footer {
 
 	private final Logger logger = LoggerFactory.getLogger(getClass());
 	
-	private MenuDAO model;
+	private FooterDAO model;
 	
 	@Inject
 	private Resource resource;
 	
 	@Inject
-	private iMenu service;
+	private iFooter service;
 	
 	@PostConstruct
 	public void init() {
 		try {
 			model = this.service.getModel(resource);
 		} catch(Exception e) {
-			logger.error("There was an error retrieving the menu model.", e);
+			logger.error("There was an error retrieving the footer model.", e);
 		}
 	}
 	
-	public MenuDAO getModel() {
+	public FooterDAO getModel() {
 		return this.model;
 	}
 }

@@ -132,11 +132,11 @@ public class MenuService implements iMenu{
 				Node itemNode = itemResource.adaptTo(Node.class);
 				if(itemNode == null) continue;
 				
-				IconCTA menuItem = new IconCTA(
+				IconCTA socialItem = new IconCTA(
 						JCRUtils.getPropertyFromNode(itemNode, MenuEnum.SOCIAL_ICON.getValue()),
 						JCRUtils.getPropertyFromNode(itemNode, MenuEnum.SOCIAL_TARGET.getValue()),
 						Utils.getPathFromResolver(resource.getResourceResolver(), JCRUtils.getPropertyFromNode(itemNode, MenuEnum.SOCIAL_LINK.getValue())));
-				socialList.add(menuItem);
+				socialList.add(socialItem);
 			}
 		}
 		return socialList;
