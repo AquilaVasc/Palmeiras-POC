@@ -1,0 +1,27 @@
+<meta charset="UTF-8" />
+
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"/>
+
+<input type="hidden" value="${properties.modalImageDesktop}" class="backgroudImage"/>     
+<div data-sly-use.container="com.adobe.cq.wcm.core.components.models.form.Container"
+     data-sly-use.grid="com.day.cq.wcm.foundation.model.responsivegrid.ResponsiveGrid"
+     class="${gird.cssClass} container">
+     <div data-sly-test="${properties.title}" class="row">
+		<div class="col-md-12 titulo">
+			<h2>
+				<span>${properties.title}</span>
+			</h2>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+	  	<sly data-sly-repeat.paragraph="${grid.paragraphs}"
+         data-sly-resource="${paragraph.path @ resourceType=paragraph.resourceType, decoration='true', cssClassName=paragraph.cssClass}"></sly>        
+	</div>
+	<sly data-sly-test="${wcmmode.edit || wcmmode.preview}"
+        	data-sly-resource="${resource.path @ resourceType=container.resourceTypeForDropArea, appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}"></sly>
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.js @ categories='container.backgroud'}"/>
+</sly>
