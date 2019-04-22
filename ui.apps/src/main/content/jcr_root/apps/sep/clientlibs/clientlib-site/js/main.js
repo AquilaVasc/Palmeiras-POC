@@ -95,23 +95,38 @@ $(document).ready(function () {
 	    $('.banner_rotativo').show();
     }
 
-    $('.list_parceiros').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        prevArrow: '#prev-arrow',
-        nextArrow: '#next-arrow',
-        infinite: true,
-        responsive: [
-        {
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 1,
-            }
-        }]
-
-    });
+    let partnersLength = $('.list_parceiros').find('.partner-item').length; 
+    if(partnersLength > 4) {
+    	$('.list_parceiros').slick({
+	        slidesToShow: 4,
+	        slidesToScroll: 1,
+	        autoplay: true,
+	        autoplaySpeed: 2000,
+	        prevArrow: '#prev-arrow',
+	        nextArrow: '#next-arrow',
+	        infinite: true,
+	        responsive: [{
+		        	breakpoint: 1024,
+		        	settings: {
+		        	slidesToShow: 3,
+		        	slidesToScroll: 3
+	        	}},{
+		        	breakpoint: 600,
+		        	settings: {
+		        	slidesToShow: 2,
+		        	slidesToScroll: 2
+	        	}},{
+		        	breakpoint: 480,
+		        	settings: {
+		        	slidesToShow: 1,
+		        	slidesToScroll: 1
+	        	}
+	    	}]
+    	});
+    	setTimeout(function(){ 
+    		$('.parceiros').show(); 
+    	}, 5000);
+	}
 
     $('.has-error').tooltip();
 }); 

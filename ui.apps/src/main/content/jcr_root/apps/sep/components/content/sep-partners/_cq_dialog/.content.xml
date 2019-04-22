@@ -5,109 +5,100 @@
     width="777px"
     sling:resourceType="cq/gui/components/authoring/dialog">
     <content
+    	granite:class="dialog-class-sep-partners"
         jcr:primaryType="nt:unstructured"
         sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
 			<include-clientlibs 
 				jcr:primaryType="nt:unstructured"
 				sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
-				categories="sep.dialog-styles"/>
-            <container
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/container"
-                margin="{Boolean}true">
-                <items jcr:primaryType="nt:unstructured">
-                	<tabs
-		                jcr:primaryType="nt:unstructured"
-		                sling:resourceType="granite/ui/components/coral/foundation/tabs"
-		                maximized="{Boolean}true">
-		                <items jcr:primaryType="nt:unstructured">
-		                	<text
-				            	jcr:primaryType="nt:unstructured"
-				                jcr:title="Conteúdo"
-				                sling:resourceType="granite/ui/components/coral/foundation/container"
-		                        margin="{Boolean}true">
-		                        <items jcr:primaryType="nt:unstructured">
-									<heading
-					                	granite:class="att-dialog-heading"
-										jcr:primaryType="nt:unstructured"
-										sling:resourceType="granite/ui/components/coral/foundation/heading"
-										level="{Long}4" 
-										text="Configuração do Conteúdo de Texto"/>
-									<title
-										jcr:primaryType="nt:unstructured"
-										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-										fieldLabel="Título" 
-										name="./title"/>
-									<subtitle
-										jcr:primaryType="nt:unstructured"
-										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-										fieldLabel="Subtítulo" 
-										required="{Boolean}true"
-										name="./subtitle"/>
-									<description
-										jcr:primaryType="nt:unstructured"
-										sling:resourceType="cq/gui/components/authoring/dialog/richtext"
-										fieldLabel="Descrição *" 
-										name="./description"
-										required="{Boolean}true"
-										useFixedInlineToolbar="{Boolean}true"
-										removeSingleParagraphContainer="{Boolean}true"
-										singleParagraphContainerReplacement="div">
-										<rtePlugins jcr:primaryType="nt:unstructured"
-											sling:resourceSuperType="/apps/sep/components/content/sep-reusable-fields/cq:dialog/content/items/simpleRichtext/rtePlugins"/>
-										<uiSettings jcr:primaryType="nt:unstructured"
-											sling:resourceSuperType="/apps/sep/components/content/sep-reusable-fields/cq:dialog/content/items/simpleRichtext/uiSettings"/>
-									</description>
-								</items>
-		                	</text>
-		                	<image
-				            	jcr:primaryType="nt:unstructured"
-				                jcr:title="Imagem"
-				                sling:resourceType="granite/ui/components/coral/foundation/container"
-		                        margin="{Boolean}true">
-		                        <items jcr:primaryType="nt:unstructured">
-		                        	<position 
-										jcr:primaryType="nt:unstructured"
-										sling:resourceType="granite/ui/components/coral/foundation/form/select"
-										fieldLabel="Posição da Imagem" 
-										name="./imagePosition">
-										<items jcr:primaryType="nt:unstructured">
-											<left 
-												jcr:primaryType="nt:unstructured"
-												text="Esquerda" 
-												value="left"
-												selected="{Boolean}true"/>
-											<right 
-												jcr:primaryType="nt:unstructured" 
-												text="Direita"
-												value="right"/>
-										</items>
-									</position>
-									<heading
-					                	granite:class="att-dialog-heading"
-										jcr:primaryType="nt:unstructured"
-										sling:resourceType="granite/ui/components/coral/foundation/heading"
-										level="{Long}4" 
-										text="Configuração da Imagem"/>
-									<image 
-										jcr:primaryType="nt:unstructured"
-										sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-										fieldLabel="Imagem" 
-										name="./image" 
-										required="{Boolean}true"
-										rootPath="/content/dam/sep"/>
-									<alt
-										jcr:primaryType="nt:unstructured"
-										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-										fieldLabel="Texto alternativo da Imagem" 
-										name="./imageAlt"/>
-								</items>
-		                	</image>
-		                </items>
-		            </tabs>
+				categories="[sep.dialog-styles, sep.partners]"/>
+		 	<main 
+		 		jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/coral/foundation/container"
+				margin="{Boolean}true">
+				<items jcr:primaryType="nt:unstructured">
+					<headingTitle 
+						granite:class="att-dialog-heading"
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/heading"
+						level="{Long}4" 
+						text="Configuração do título" />
+					<title 
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+						fieldLabel="Título" 
+						name="./title"/>
+					<headingPartners 
+						granite:class="att-dialog-heading"
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/heading"
+						level="{Long}4" 
+						text="Configuração da lista de parceiros"/>
+					<multifield 
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+						composite="{Boolean}true"
+						eaem-show-on-collapse="EAEM.showProductName">
+						<field 
+							granite:class="dialog-class-sep-partnersList"
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/coral/foundation/container"
+							name="./partnersList">
+							<items jcr:primaryType="nt:unstructured">
+								<column
+									granite:class="foundation-layout-util-maximized-alt coral-Form-fieldwrapper"
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/container">
+									<items jcr:primaryType="nt:unstructured">
+										<heading 
+											granite:class="att-dialog-heading"
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/heading"
+											level="{Long}4" 
+											text="Item da lista" />
+										<image 
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+											fieldLabel="Imagem" 
+											name="./image" 
+											required="{Boolean}true"
+											rootPath="/content/dam/sep" />
+										<link 
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+											fieldLabel="URL do Link" 
+											name="./link" 
+											rootPath="/content/sep" />
+										<alt 
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldLabel="Texto alternativo da Imagem" 
+											name="./alt" />
+										<target 
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Abrir ao clicar" 
+											name="./target">
+											<items jcr:primaryType="nt:unstructured">
+												<blank 
+													jcr:primaryType="nt:unstructured"
+													text="Abrir em uma nova aba" 
+													value="_blank"
+													selected="{Boolean}true" />
+												<self 
+													jcr:primaryType="nt:unstructured"
+													text="Abrir na mesma aba" 
+													value="_self" />
+											</items>
+										</target>
+									</items>
+								</column>
+							</items>
+						</field>
+					</multifield>
 				</items>
-            </container>
+			</main>
         </items>
     </content>
 </jcr:root>

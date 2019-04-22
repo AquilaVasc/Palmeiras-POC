@@ -9251,7 +9251,7 @@ html {
 }
 
 .titulo h2 {
-    padding: 80px 0;
+    padding: 40px 0;
     text-align: center;
     font-size: 4em
 }
@@ -9977,8 +9977,12 @@ span.inative {
     border-top: 30px solid #048344
 }
 
+.parceiros {
+	display: none;
+}
+
 .parceiros .list_parceiros {
-    padding-top: 40px;
+    padding: 40px 0;
     text-align: center
 }
 
@@ -9997,7 +10001,7 @@ span.inative {
 
 .parceiros .arrows .arrow {
     display: inline-block;
-    background: url(../img/parceiros/arrows.png) top left no-repeat;
+    background: url(../resources/images/arrows.png) top left no-repeat;
     width: 50px;
     height: 50px;
     margin: 0 5px;

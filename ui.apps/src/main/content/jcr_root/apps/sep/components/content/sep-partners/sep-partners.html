@@ -1,38 +1,23 @@
 <meta charset="UTF-8"/>
 
 <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
-     data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"/>
+     data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"
+     data-sly-use.component="com.aem.sep.core.models.Partners"/>
      
-<section class="parceiros">
+<section data-sly-test="${component.model.partners}" class="parceiros">
 	<div class="container">
-		<div class="row">
+		<div data-sly-test="${component.model.title}" class="row">
 			<div class="col-md-12 titulo">
-				<h2><span>PARCEIROS</span></h2>
+				<h2><span>${component.model.title}</span></h2>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-12 list_parceiros">
-				<div class="col-3 text-center">
-					<a href="https://socio-palmeiras.futebolcard.com/info/benefits#partner-3">
-						<figure class="text-center"><img height="70" src="https://sociotorcedor.s3.amazonaws.com/data/partner/27/1529166998591970faculdade-das-americas.png" alt=""></figure>
+			<div data-sly-list.partner="${component.model.partners}" class="col-12 list_parceiros">
+				<div class="partner-item col-3 text-center">
+					<a href="${partner.link}" target="${partner.target}">
+						<figure class="text-center"><img height="70" src="${partner.image}" alt="${partner.alt}"></figure>
 					</a>
 				</div>
-				<div class="col-3 text-center">
-					<a href="https://socio-palmeiras.futebolcard.com/info/benefits#partner-5">
-						<figure class="text-center"><img height="70" src="https://sociotorcedor.s3.amazonaws.com/data/partner/27/152916863112503palmeiras-store.png" alt=""></figure>
-					</a>
-				</div>
-				<div class="col-3 text-center">
-					<a href="https://socio-palmeiras.futebolcard.com/info/benefits#partner-233">
-						<figure class="text-center"><img height="70" src="https://sociotorcedor.s3.amazonaws.com/data/partner/27/1555615494255278tifosi.JPG" alt=""></figure>
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="row arrows">
-			<div class=" col-md-12 text-center">
-				<a role="button" id="prev-arrow" class="arrow voltar"></a>
-				<a role="button" id="next-arrow" class="arrow avancar"></a>
 			</div>
 		</div>
 	</div>
