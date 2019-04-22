@@ -1,0 +1,15 @@
+<meta charset="UTF-8"/>
+
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"
+     data-sly-use.component="com.aem.sep.core.models.Carousel"/>
+
+<div class="banner_rotativo" id="banner" data-ride="carousel">
+	<div data-sly-list.carousel="${component.model.carousel}" class="new_carousel" role="listbox">
+		<div class="item ${carouselList.first ? 'active' : ''}">
+			<a href="${carousel.link}" target="${carousel.target}">
+				<img src="${carousel.image}" alt="${carousel.alt}">
+			</a>
+		</div>
+	</div>
+</div>

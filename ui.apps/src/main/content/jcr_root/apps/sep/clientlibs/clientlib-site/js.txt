@@ -1,3 +1,4 @@
 #base=js
 vendor.min.js
+slick.js
 main.js
