@@ -1,4 +1,4 @@
 var $imgEl = $('.backgroudImage');
 var imgPath = $imgEl.val();
-$imgEl.closest('.planos').css("background-image", "url('" + imgPath +"')"); 
+$imgEl.closest('.novosPlanos').css("background-image", "url('" + imgPath +"')"); 
 
