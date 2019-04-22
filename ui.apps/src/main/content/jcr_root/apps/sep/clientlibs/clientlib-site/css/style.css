@@ -8983,6 +8983,10 @@ strong {
     font-family: open_sansbold, sans-serif
 }
 
+.banner_rotativo {
+	display: none;
+}
+
 .banner_rotativo .carousel-inner .cloneditem-1,
 .banner_rotativo .carousel-inner .cloneditem-2,
 .banner_rotativo .carousel-inner .cloneditem-3 {
