@@ -11,4 +11,44 @@
         jcr:primaryType="sling:MessageEntry"
         sling:key="associate.text"
         sling:message="Be an Associate"/>
+    <see_benefits
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="see.benefits"
+        sling:message="SEE MORE BENEFITS"/>
+    <p_mes
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="p.month.text"
+        sling:message="a month"/>
+    <sector_central
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="sector.central"
+        sling:message="CENTRAL"/>
+    <sector_west
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="sector.west"
+        sling:message="WEST"/>
+    <sector_superior
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="sector.superior"
+        sling:message="SUPERIOR"/>
+    <sector_go
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="sector.go"
+        sling:message="GO"/>
+    <sector_south
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="sector.south"
+        sling:message="SOUTH"/>
+    <sector_north
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="sector.north"
+        sling:message="NORTH"/>
+    <descount_sector
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="descount.sector"
+        sling:message="DESCOUNT BY SECTOR"/>
+    <currency
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="currency"
+        sling:message="U$$"/>    
 </jcr:root>

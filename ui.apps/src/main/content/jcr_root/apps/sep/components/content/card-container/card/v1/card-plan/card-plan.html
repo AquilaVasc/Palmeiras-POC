@@ -1,7 +1,7 @@
 
 <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
      data-sly-call="${templates.placeholder @ isEmpty = !properties.plans}"
-      data-sly-use.card="com.aem.sep.core.models.Card"/>
+      data-sly-use.card="com.aem.sep.core.models.PlanCard"/>
 
 <div data-sly-test="${card.plans}" class="box">
 	<div>
@@ -13,172 +13,62 @@
 				<div class="row no-gutters">
 					<div class="col-12">
 						<p class="text-center">
-							O plano perfeito para quem vai a todo jogo com a galera de sempre! Chame seus amigos e familiares para dividir a paixão pelo Verdão, e venha para o Avanti Diamante!
+							${properties.simpleRichtext @ context='html'}
 						</p>
 					</div>
 					<div class="col-12 text-center">
-						<h4>DESCONTO POR SETOR</h4>
+						<h4>${'descount.sector' @ i18n}</h4>
 					</div>
 					<div class="col text-center">
 						<span>
-							<strong>100%</strong><br>
-							CENTRAL<br>
-							OESTE
+							<strong>${properties.descountCentral}%</strong><br>
+							${'sector.central' @ i18n}<br>
+							${'sector.west' @ i18n}
 						</span>
 					</div>
 					<div class="col text-center">
 						<span>
-							<strong>100%</strong><br>
-							SUPERIOR
+							<strong>${properties.descountSuperior}%</strong><br>
+							${'sector.superior' @ i18n}
 						</span>
 					</div>
 					<div class="col text-center">
 						<span>
-							<strong>100%</strong><br>
-							GOL<br>SUL
+							<strong>${properties.descountSouth}%</strong><br>
+							${'sector.go' @ i18n}<br>${'sector.south' @ i18n}
 						</span>
 					</div>
 					<div class="col text-center">
 						<span>
-							<strong>100%</strong><br>
-							GOL<br>NORTE
+							<strong>${properties.descountNorth}%</strong><br>
+							${'sector.go' @ i18n}<br>${'sector.north' @ i18n}
 						</span>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="saiba_mais col-10 offset-1">
+			<div class="saiba_mais col-10 offset-1" data-sly-list.mult="${card.getItems}">
 				<div class="promo row align-items-center no-gutters">
 					<div class="col-2 text-right">
 						<span class="circle-plans">
-						<img width="25px" src="https://socio-palmeiras.futebolcard.com/avanti/img/icons/1_icons_site_2dependentes.png">
+							<i class=".text-light ${mult.itemIcon}"></i>
 						</span>
 					</div>
 					<div class="col-10">
-					Você + 2 dependentes sem custo adicional
-					</div>
-				</div>
-				<div class="promo row align-items-center no-gutters">
-					<div class="col-2 text-right">
-						<span class="circle-plans">
-							<img width="25px" src="https://socio-palmeiras.futebolcard.com/avanti/img/icons/2_icons_site_ingresso.png">
-						</span>
-					</div>
-					<div class="col-10">
-					100% de desconto em ingressos
-					</div>
-				</div>
-				<div class="promo row align-items-center no-gutters">
-					<div class="col-2 text-right">
-						<span class="circle-plans">
-							<img width="25px" src="https://socio-palmeiras.futebolcard.com/avanti/img/icons/3_icons_site_prevenda.png">
-						</span>
-					</div>
-					<div class="col-10">
-						1ª pré-venda, independente de frequência
-					</div>
-				</div>
-				<div class="promo row align-items-center no-gutters">
-					<div class="col-2 text-right">
-						<span class="circle-plans">
-							<img width="25px" src="https://socio-palmeiras.futebolcard.com/avanti/img/icons/4_icons_site_prevendaingresso.png">
-						</span>
-					</div>
-					<div class="col-10">
-						Pré-venda de ingressos &amp; rating
-					</div>
-				</div>
-				<div class="promo row align-items-center no-gutters">
-					<div class="col-2 text-right">
-						<span class="circle-plans">
-							<img width="25px" src="https://socio-palmeiras.futebolcard.com/avanti/img/icons/5_icons_site_ingresso.png">
-						</span>
-					</div>
-					<div class="col-10">
-						Descontos em ingressos
-					</div>
-				</div>
-				<div class="promo row align-items-center no-gutters">
-					<div class="col-2 text-right">
-						<span class="circle-plans">
-							<img width="25px" src="https://socio-palmeiras.futebolcard.com/avanti/img/icons/6_icons_site_revista.png">
-						</span>
-					</div>
-					<div class="col-10">
-						Revista Palmeiras
-					</div>
-				</div>
-				<div class="promo row align-items-center no-gutters">
-					<div class="col-2 text-right">
-						<span class="circle-plans">
-							<img width="25px" src="https://socio-palmeiras.futebolcard.com/avanti/img/icons/8_icons_site_exp_excl.png">
-						</span>
-					</div>
-					<div class="col-10">
-						Acesso a Experiências Exclusivas
-					</div>
-				</div>
-				<div class="promo row align-items-center no-gutters">
-					<div class="col-2 text-right">
-						<span class="circle-plans">
-							<img width="25px" src="https://socio-palmeiras.futebolcard.com/avanti/img/icons/9_icons_site_tour.png">
-						</span>
-					</div>
-					<div class="col-10">
-						Descontos em pacotes da Palmeiras Tour
-					</div>
-				</div>
-				<div class="promo row align-items-center no-gutters">
-					<div class="col-2 text-right">
-						<span class="circle-plans">
-							<img width="25px" src="https://socio-palmeiras.futebolcard.com/avanti/img/icons/10_icons_site_clubvantagens.png">
-						</span>
-					</div>
-					<div class="col-10">
-						Clube de vantagens
-					</div>
-				</div>
-				<div class="promo row align-items-center no-gutters">
-					<div class="col-2 text-right">
-						<span class="circle-plans">
-							<img width="25px" src="https://socio-palmeiras.futebolcard.com/avanti/img/icons/11_icons_site_futebolmelhor.png">
-						</span>
-					</div>
-					<div class="col-10">
-						Participação Movimento Futebol Melhor
-					</div>
-				</div>
-				<div class="promo row align-items-center no-gutters">
-					<div class="col-2 text-right">
-						<span class="circle-plans">
-							<img width="25px" src="https://socio-palmeiras.futebolcard.com/avanti/img/icons/12_icons_site_parceiros.png">
-						</span>
-					</div>
-					<div class="col-10">
-						Desconto em diversos parceiros
-					</div>
-				</div>
-				<div class="promo row align-items-center no-gutters">
-					<div class="col-2 text-right">
-						<span class="circle-plans">
-							<img width="25px" src="https://socio-palmeiras.futebolcard.com/avanti/img/icons/13_icons_site_avanti.png">
-						</span>
-					</div>
-					<div class="col-10">
-						Todos os benefícios de ser Avanti
+						${mult.itemText}
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-12 text-center">
-				<span class="saiba_mais--toggle" id="saibaMaisToggle">VER MAIS BENEFÍCIOS</span>
+				<span class="saiba_mais--toggle" id="saibaMaisToggle">${'see.benefits' @ i18n}</span>
 			</div>
 		</div>
 		<a href="${card.linkto}" class="register">
-			<span>R$ ${card.price}</span>
-			<small>p/mês</small>
+			<span>${'currency' @ i18n} ${card.price}</span>
+			<small>${'p.month.text' @i18n}</small>
 	   	</a>
    	</div>
 </div>
