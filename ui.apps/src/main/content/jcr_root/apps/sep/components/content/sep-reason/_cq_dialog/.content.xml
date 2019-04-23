@@ -2,26 +2,26 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="nt:unstructured"
     jcr:title="Reason"
-	sling:resourceType="cq/gui/components/authoring/dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog"
     width="777px">
     <content
         jcr:primaryType="nt:unstructured"
         sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
-			<include-clientlibs 
-				jcr:primaryType="nt:unstructured"
-				sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
-				categories="sep.dialog-styles"/>
+            <include-clientlibs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+                categories="sep.dialog-styles"/>
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container"
                 margin="{Boolean}true">
                 <items jcr:primaryType="nt:unstructured">
-                	<tabs
-		                jcr:primaryType="nt:unstructured"
-		                sling:resourceType="granite/ui/components/coral/foundation/tabs"
-		                maximized="{Boolean}true">
-		                <items jcr:primaryType="nt:unstructured">
+                    <tabs
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                        maximized="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
                             <text
                                 jcr:primaryType="nt:unstructured"
                                 jcr:title="Conteúdo"
@@ -59,9 +59,9 @@
                                     </content>
                                 </items>
                             </text>
-		                </items>
-		            </tabs>
-				</items>
+                        </items>
+                    </tabs>
+                </items>
             </container>
         </items>
     </content>
