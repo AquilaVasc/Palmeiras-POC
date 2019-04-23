@@ -1,0 +1,24 @@
+<meta charset="UTF-8"/>
+
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"
+     data-sly-use.component="com.aem.sep.core.models.Partners"/>
+     
+<section data-sly-test="${component.model.partners}" class="parceiros">
+	<div class="container">
+		<div data-sly-test="${component.model.title}" class="row">
+			<div class="col-md-12 titulo">
+				<h2><span>${component.model.title}</span></h2>
+			</div>
+		</div>
+		<div class="row">
+			<div data-sly-list.partner="${component.model.partners}" class="col-12 list_parceiros">
+				<div class="partner-item col-3 text-center">
+					<a href="${partner.link}" target="${partner.target}">
+						<figure class="text-center"><img height="70" src="${partner.image}" alt="${partner.alt}"></figure>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

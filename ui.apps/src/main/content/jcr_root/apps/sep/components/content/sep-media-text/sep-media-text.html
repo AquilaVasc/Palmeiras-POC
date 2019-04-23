@@ -1,0 +1,35 @@
+<section class="interna program w-100">
+    <div class="container">
+        <div class="article intro w-100 pt-0">
+            <div class="topo">
+                <h2><strong>${properties.mediaTitle}</strong></h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12" data-sly-test="${properties.mediaPosition == 'left'}">
+                    <sly data-sly-test="${properties.mediaType == 'video'}">
+                        <iframe width="100%" height="100%"
+                                src="https://www.youtube.com/embed/${properties.youtubeId @ context='text'}">
+                        </iframe>
+                    </sly>
+                    <sly data-sly-test="${properties.mediaType == 'image'}">
+                        <img src="${properties.image}" class="img-fluid" alt="${properties.imageAlt}">
+                    </sly>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 text">
+                    <h2><strong>${properties.subtitle}</strong></h2>
+                    <p class="text-justify">${properties.description @ context='html'}</p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12" data-sly-test="${properties.mediaPosition == 'right'}">
+                    <sly data-sly-test="${properties.mediaType == 'video'}">
+                        <iframe width="100%" height="100%"
+                                src="https://www.youtube.com/embed/${properties.youtubeId @ context='text'}">
+                        </iframe>
+                    </sly>
+                    <sly data-sly-test="${properties.mediaType == 'image'}">
+                        <img src="${properties.image}" class="img-fluid" alt="${properties.imageAlt}">
+                    </sly>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
