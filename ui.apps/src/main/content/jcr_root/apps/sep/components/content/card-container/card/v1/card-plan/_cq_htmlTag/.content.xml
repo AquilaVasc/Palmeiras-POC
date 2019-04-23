@@ -3,4 +3,4 @@
     cq:tagName="div"
     jcr:primaryType="nt:unstructured"
 	data-aos="fade-down"
-    class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 item aos-init"/>
+    class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 item aos-init aos-animate"/>
