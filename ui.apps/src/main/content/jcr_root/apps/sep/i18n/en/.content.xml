@@ -50,5 +50,77 @@
     <currency
         jcr:primaryType="sling:MessageEntry"
         sling:key="currency"
-        sling:message="U$$"/>    
+        sling:message="U$$"/>
+    <card_container
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="card.container"
+        sling:message="Card Container"/>
+    <card_container_plans
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="card.container.plans"
+        sling:message="Card Container Plans"/>
+    <card
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="card"
+        sling:message="Card"/>
+    <card_plan
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="card.plan"
+        sling:message="Plan Card"/>    
+    <plan_description
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="plan.description"
+        sling:message="Plan description"/>
+    <card_back
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="card.container.back"
+        sling:message="Container image background"/>
+    <desktop_image
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="desktop.image"
+        sling:message="Desktop Image"/>
+    <link
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="linkto.link"
+        sling:message="Link"/>
+    <target_title
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="linkto.target"
+        sling:message="Link Target"/>
+    <target_blank
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="target.blank"
+        sling:message="Open in new tab"/>
+    <target_self
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="target.self"
+        sling:message="Open in this page"/>
+    <benefits_hading
+   		jcr:primaryType="sling:MessageEntry"
+        sling:key="benefits.heading"
+        sling:message="Benefits List"/>
+    <benefit_plan
+   		jcr:primaryType="sling:MessageEntry"
+        sling:key="plan.benefit"
+        sling:message="Plan Benefit"/>
+    <text
+   		jcr:primaryType="sling:MessageEntry"
+        sling:key="text"
+        sling:message="Text"/>
+    <icons
+   		jcr:primaryType="sling:MessageEntry"
+        sling:key="icons"
+        sling:message="Icons"/>
+    <plans_heading
+   		jcr:primaryType="sling:MessageEntry"
+        sling:key="plans.heading"
+        sling:message="Plans"/>
+    <price
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="price"
+        sling:message="Price"/>
+    <bronze
+    	jcr:primaryType="sling:MessageEntry"
+        sling:key="bronze"
+        sling:message="Bronze"/>
 </jcr:root>

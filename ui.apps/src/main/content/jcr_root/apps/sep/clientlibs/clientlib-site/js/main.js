@@ -123,9 +123,7 @@ $(document).ready(function () {
 	        	}
 	    	}]
     	});
-    	setTimeout(function(){ 
-    		$('.parceiros').show(); 
-    	}, 5000);
+		$('.parceiros').show(); 
 	}
 
     $('.has-error').tooltip();

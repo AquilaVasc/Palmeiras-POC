@@ -2,8 +2,9 @@
 
 <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
      data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"/>
+<sly data-sly-use.id="com.aem.sep.core.models.IdGenerator"/>
 
-<input data-id="${currentNode.identifier}" type="hidden" value="${properties.modalImageDesktop}" class="backgroudImage"/>     
+<input data-id="${id.RamdomId}" type="hidden" value="${properties.modalImageDesktop}" class="backgroudImage"/>     
 <div data-sly-use.container="com.adobe.cq.wcm.core.components.models.form.Container"
      data-sly-use.grid="com.day.cq.wcm.foundation.model.responsivegrid.ResponsiveGrid"
      class="${gird.cssClass} container">

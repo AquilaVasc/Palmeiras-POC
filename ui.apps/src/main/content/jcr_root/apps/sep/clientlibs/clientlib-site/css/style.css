@@ -13329,3 +13329,7 @@ input[type=mail]:focus {
 .aem-Grid{
 	width: 100%;
 }
+
+.circle-plans i{
+	color:white;
+}

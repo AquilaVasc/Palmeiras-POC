@@ -15,11 +15,11 @@
                     	jcr:primaryType="nt:unstructured"
                     	sling:resourceType="/libs/granite/ui/components/coral/foundation/form/select"
                     	name="./plans"
-                    	fieldLabel="Planos">
+                    	fieldLabel="plans.heading">
                     	<items jcr:primaryType="nt:unstructured">
 							<bronze
 	                    		jcr:primaryType="nt:unstructured"
-	                    		text="Bronze"
+	                    		text="bronze"
 	                    		value="bronze"/>
 	                    	<silver
 	                    		jcr:primaryType="nt:unstructured"
@@ -50,16 +50,16 @@
                     <linkto
 					    jcr:primaryType="nt:unstructured"
 					    sling:resourceType="granite/ui/components/foundation/include"
-					    path="/apps/sep/components/content/reusablefields/cq:dialog/content/items/linktolink"/>
+					    path="/apps/sep/components/content/sep-reusable-fields/cq:dialog/content/items/linktolink"/>
 					<linktoTarget
 					    jcr:primaryType="nt:unstructured"
 					    sling:resourceType="granite/ui/components/foundation/include"
-					    path="/apps/sep/components/content/reusablefields/cq:dialog/content/items/linktotarget"/>
+					    path="/apps/sep/components/content/sep-reusable-fields/cq:dialog/content/items/linktotarget"/>
                     <price
 					    jcr:primaryType="nt:unstructured"
 						sling:resourceType="granite/ui/components/foundation/form/textfield"
 						name="./price"
-						fieldLabel="Preço"
+						fieldLabel="price"
 						validation="txt-validate">
 						<granite:data
 							jcr:primaryType="nt:unstructured"
@@ -111,7 +111,7 @@
 						sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
 						composite="{Boolean}true" 
 						eaem-show-on-collapse="EAEM.showProductName"
-						fieldLabel="Lista de benefícios do plano">
+						fieldLabel="benefits.heading">
 						<field 
 							jcr:primaryType="nt:unstructured"
 							sling:resourceType="granite/ui/components/coral/foundation/container"
@@ -127,17 +127,17 @@
 											jcr:primaryType="nt:unstructured"
 											sling:resourceType="granite/ui/components/coral/foundation/heading"
 											level="{Long}4" 
-											text="Benefício do plano"/>
+											text="plan.benefit"/>
 										<text 
 											jcr:primaryType="nt:unstructured"
 											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-											fieldLabel="Texto" 
+											fieldLabel="text" 
 											required="{Boolean}true"
 											name="./itemText"/>
 										<icons 
 											jcr:primaryType="nt:unstructured"
 											sling:resourceType="acs-commons/components/authoring/graphiciconselect"
-											fieldLabel="Ícones" 
+											fieldLabel="icons" 
 											name="./itemIcon"
 											required="{Boolean}true">
 											<datasource 

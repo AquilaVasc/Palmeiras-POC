@@ -30,6 +30,30 @@
 	                </cui>
 	            </uiSettings>
 	        </simpleRichtext>
+	        <linktolink
+			    cq:showOnCreate="{Boolean}true"
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+				fieldLabel="linkto.link"
+				name="./linktoLink"
+				rootPath="/content/sep"/>
+			<linktotarget
+			    cq:showOnCreate="{Boolean}true"
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/coral/foundation/form/select"
+				fieldLabel="linkto.target"
+				name="./linktoTarget">
+				<items jcr:primaryType="nt:unstructured">
+					<blank
+						jcr:primaryType="nt:unstructured"
+						text="target.blank"
+						value="_blank"/>
+					<self
+						jcr:primaryType="nt:unstructured"
+						text="target.self"
+						value="_self"/>
+				</items>
+			</linktotarget>
 		</items>
 	</content>
 </jcr:root>
