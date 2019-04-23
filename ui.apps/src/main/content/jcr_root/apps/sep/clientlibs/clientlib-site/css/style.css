@@ -9251,7 +9251,7 @@ html {
 }
 
 .titulo h2 {
-    padding: 40px 0;
+    padding: 80px 0;
     text-align: center;
     font-size: 4em
 }
@@ -9977,12 +9977,8 @@ span.inative {
     border-top: 30px solid #048344
 }
 
-.parceiros {
-	display: none;
-}
-
 .parceiros .list_parceiros {
-    padding: 40px 0;
+    padding-top: 40px;
     text-align: center
 }
 
@@ -10001,7 +9997,7 @@ span.inative {
 
 .parceiros .arrows .arrow {
     display: inline-block;
-    background: url(../resources/images/arrows.png) top left no-repeat;
+    background: url(../img/parceiros/arrows.png) top left no-repeat;
     width: 50px;
     height: 50px;
     margin: 0 5px;
@@ -10640,11 +10636,7 @@ input[type=mail]:focus {
     border-radius: 4px
 }
 
-.program .itens {
-    background: url(../img/bg_programa2.png) #0b1c0d top center repeat-x
-}
-
-.program .itens .box {
+.box {
     border: 1px solid #fff;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -10656,7 +10648,7 @@ input[type=mail]:focus {
     height: 100%
 }
 
-.program .itens .box h4 {
+.box h4 {
     font-family: open_sansbold, sans-serif;
     padding: 20px 0
 }
