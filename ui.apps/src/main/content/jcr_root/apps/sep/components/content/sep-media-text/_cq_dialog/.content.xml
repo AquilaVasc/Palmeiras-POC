@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Mídia e Texto"
+	sling:resourceType="cq/gui/components/authoring/dialog"
+    width="777px">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+			<include-clientlibs 
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+				categories="sep.dialog-styles"/>
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                	<tabs
+		                jcr:primaryType="nt:unstructured"
+		                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+		                maximized="{Boolean}true">
+		                <items jcr:primaryType="nt:unstructured">
+                            <text
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Conteúdo"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <heading
+                                        granite:class="att-dialog-heading"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                        level="{Long}4"
+                                        text="Configuração do Conteúdo de Texto"/>
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Título"
+                                        name="./title"/>
+                                    <subtitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Subtítulo"
+                                        required="{Boolean}true"
+                                        name="./subtitle"/>
+                                    <description
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldLabel="Descrição *"
+                                        name="./description"
+                                        required="{Boolean}true"
+                                        useFixedInlineToolbar="{Boolean}true"
+                                        removeSingleParagraphContainer="{Boolean}true"
+                                        singleParagraphContainerReplacement="div">
+                                        <rtePlugins jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/sep/components/content/sep-reusable-fields/cq:dialog/content/items/simpleRichtext/rtePlugins"/>
+                                        <uiSettings jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/sep/components/content/sep-reusable-fields/cq:dialog/content/items/simpleRichtext/uiSettings"/>
+                                    </description>
+                                </items>
+                            </text>
+                            <media-tab
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Mídia"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <type
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Tipo de Mídia"
+                                        name="./mediaType">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <video
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Vídeo"
+                                                value="video"
+                                                selected="{Boolean}true"/>
+                                            <imagem
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Imagem"
+                                                value="image"/>
+                                        </items>
+                                    </type>
+                                    <position
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Posição da Mídia"
+                                        name="./mediaPosition">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <left
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Esquerda"
+                                                value="left"
+                                                selected="{Boolean}true"/>
+                                            <right
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Direita"
+                                                value="right"/>
+                                        </items>
+                                    </position>
+                                    <heading
+                                        granite:class="att-dialog-heading"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                        level="{Long}4"
+                                        text="Configuração de Mídia"/>
+                                    <media-title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Titulo da Mídia"
+                                        name="./mediaTitle"/>
+                                    <youtube-id
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="YouTube Video ID"
+                                        name="./youtubeId"/>
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Imagem"
+                                        name="./image"
+                                        rootPath="/content/dam/sep"/>
+                                    <alt
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Texto alternativo da Imagem"
+                                        name="./imageAlt"/>
+                                </items>
+                            </media-tab>
+		                </items>
+		            </tabs>
+				</items>
+            </container>
+        </items>
+    </content>
+</jcr:root>
